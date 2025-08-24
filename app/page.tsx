@@ -2,12 +2,12 @@
 import { BackgroundPaths } from "../components/blocks/background-paths";
 import { MagicCard } from "../components/blocks/cards-showcase";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Home() {
   return (
     <main>
       <BackgroundPaths title="Build Your Dreams" />
-
       <section className="mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-2 justify-center justify-items-center max-w-screen-lg">
         <div className="rounded-[var(--radius)]">
           <MagicCard className="p-6 mb-3">
@@ -83,6 +83,9 @@ export default function Home() {
           </MagicCard>
         </div>
       </section>
+      <div className="mt-6 flex justify-center">
+        <ThemeToggle />
+      </div>{" "}
     </main>
   );
 }

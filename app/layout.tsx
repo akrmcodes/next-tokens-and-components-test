@@ -1,13 +1,16 @@
-// app/layout.tsx  (Server Component)
+// app/layout.tsx
 import "./globals.css"
+import { ThemeProvider } from "next-themes"
 import { Navbar5 } from "@/components/blocks/navbar-shadcn"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning className="theme-clean dark">
       <body>
-        <Navbar5 />
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar5 />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
