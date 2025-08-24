@@ -5,7 +5,7 @@ import { Navbar5 } from "@/components/blocks/navbar-shadcn"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className="theme-clean dark">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar5 />
