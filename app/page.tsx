@@ -8,7 +8,7 @@ import { ThemePreviewToggle } from "@/components/ui/theme-preview-toggle"
 export default function Home() {
   return (
     <main>
-      <BackgroundPaths title="Build Your Dreams" />
+      <BackgroundPaths title="AKRM Q" />
       <section className="mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-2 justify-center justify-items-center max-w-screen-lg">
         <div className="rounded-[var(--radius)]">
           <MagicCard className="p-6 mb-3">
