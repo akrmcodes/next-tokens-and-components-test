@@ -3,6 +3,7 @@ import { BackgroundPaths } from "../components/blocks/background-paths";
 import { MagicCard } from "../components/blocks/cards-showcase";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { ThemePreviewToggle } from "@/components/ui/theme-preview-toggle"
 
 export default function Home() {
   return (
@@ -86,6 +87,9 @@ export default function Home() {
       <div className="mt-6 flex justify-center">
         <ThemeToggle />
       </div>{" "}
+          <div className="hidden items-center gap-3 lg:flex mt-6 flex justify-center">
+      <ThemePreviewToggle />
+    </div>
     </main>
   );
 }
