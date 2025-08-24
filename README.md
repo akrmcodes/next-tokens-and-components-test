@@ -178,5 +178,3 @@ Preview components (Navbar, Hero, Magic Cards, Buttons).
 Switch between Light/Dark and Vercel / Clean / Amber themes.
 
 Extend the playground with new components easily.
-
-🎉 Built as a professional components playground for the team to test and customize UI components without starting from scratch.
