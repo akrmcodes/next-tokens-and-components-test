@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 function FloatingPaths({ position }: { position: number }) {
   const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -76,10 +77,7 @@ export function BackgroundPaths({
         >
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter">
             {words.map((word, wordIndex) => (
-              <span
-                key={wordIndex}
-                className="inline-block me-4 last:me-0"
-              >
+              <span key={wordIndex} className="inline-block me-4 last:me-0">
                 {word.split("").map((letter, letterIndex) => (
                   <motion.span
                     key={`${wordIndex}-${letterIndex}`}
@@ -104,24 +102,14 @@ export function BackgroundPaths({
             className="inline-block group relative bg-gradient-to-b from-foreground/10 to-background/10 
             p-px rounded-2xl backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
           >
-            <Button
-              variant="ghost"
-              className="rounded-[1.15rem] px-8 py-6 text-lg font-semibold backdrop-blur-md 
-              bg-background/95 hover:bg-background text-foreground 
-              transition-all duration-300 group-hover:-translate-y-0.5 border border-border
-              hover:shadow-md
-              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            <HoverBorderGradient
+              as="button" // أو "a" لو تبغاه رابط
+              className="text-sm md:text-base font-semibold cursor-pointer"
+              containerClassName="rounded-[1.15rem]" // نفس انحناءة الزر القديم
+              duration={1} // سرعة حركة الهايلايت
             >
-              <span className="opacity-90 group-hover:opacity-100 transition-opacity">
-                Discover Excellence
-              </span>
-              <span
-                className="ms-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
-                transition-all duration-300"
-              >
-                →
-              </span>
-            </Button>
+              Discover Excellence →
+            </HoverBorderGradient>
           </div>
         </motion.div>
       </div>

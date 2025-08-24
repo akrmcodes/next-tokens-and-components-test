@@ -1,6 +1,7 @@
 "use client";
 
 import { MenuIcon } from "lucide-react";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"
 
 import {
   Accordion,
@@ -128,10 +129,26 @@ const Navbar5 = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="hidden items-center gap-4 lg:flex">
-            <Button variant="outline">Sign in</Button>
-            <Button>Start for free</Button>
-          </div>
+         <div className="hidden items-center gap-4 lg:flex">
+  <HoverBorderGradient
+    as="a"
+    containerClassName="rounded-[0.75rem]"   // قريب من زر outline
+    className="text-sm font-medium cursor-pointer"
+    duration={1}
+  >
+    Sign in
+  </HoverBorderGradient>
+
+  <HoverBorderGradient
+    as="a"
+    containerClassName="rounded-[0.75rem]"
+    className="text-sm font-semibold cursor-pointer"
+    duration={1}
+  >
+    Start for free →
+  </HoverBorderGradient>
+</div>
+
           <Sheet>
             <SheetTrigger asChild className="lg:hidden">
               <Button variant="outline" size="icon">
